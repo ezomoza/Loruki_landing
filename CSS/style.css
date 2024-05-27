@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
+:root {
+  --primary-color: #047aed;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,8 +39,9 @@ img {
   width: 100%;
 }
 
+/* navbar style */
 .navbar {
-  background-color: #047aed;
+  background-color: var(--primary-color);
   color: #fff;
   height: 70px;
 }
@@ -59,6 +64,29 @@ img {
   justify-content: space-between;
 }
 
+/* Showcase */
+.showcase {
+  height: 400px;
+  background-color: var(--primary-color);
+  color: #fff;
+  position: relative;
+}
+
+.showcase h1 {
+  font-size: 40px;
+}
+
+.showcase p {
+  margin: 20px 0;
+}
+
+.showcase .gris {
+  grid-template-columns: 55% 45%;
+  gap: 30px;
+}
+
+
+/* Utilidades */
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -68,6 +96,15 @@ img {
 
 .flex {
   display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
   align-items: center;
   height: 100%;
 }
